@@ -64,7 +64,7 @@ void setup() {
   button1.interval(15);                      // DEBOUNCE INTERVAL IN MILLISECONDS
 
   leds.begin();
-  leds.setPixel(2, YELLOW);
+  leds.setPixel(0, YELLOW);
   leds.show();
   delay(10);
 
@@ -82,14 +82,14 @@ void loop() {
     if (inState == 0) {
       inState = 1;
       sgtl5000.inputSelect(inState);
-      leds.setPixel(2, PINK);  //which Pixel, which color
+      leds.setPixel(0, PINK);  //which Pixel, which color
       leds.show();             //change the pixel
     }
 
     else if (inState == 1) {
       inState = 0;
       sgtl5000.inputSelect(inState);
-      leds.setPixel(2, YELLOW);
+      leds.setPixel(0, YELLOW);
       leds.show();
     }
   }
